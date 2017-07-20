@@ -50,58 +50,6 @@ label.ui-marmots-label-check.marmots-label-left,label.ui-marmots-label-radio.mar
     padding-left: 26px !important;
 }
 
-.ui-marmots-label-radio {
-    background-image: url(../../img/default/input-radio.png);
-    background-repeat: no-repeat;
-    background-position: 0 2px;
-    /* padding-left: 20px !important; */
-}
-
-.ui-marmots-label-radio.disabled {
-    background-image: url(../../img/default/input-radio-disabled.png) !important
-}
-
-.ui-marmots-label-radio:hover {
-    background-image: url(../../img/default/input-radio-hover.png)
-}
-
-.ui-marmots-label-radio.on {
-    background-image: url(../../img/default/input-radio-checked.png)
-}
-
-.ui-marmots-label-radio.on.disabled {
-    background-image: url(../../img/default/input-radio-checked-disabled.png) !important
-}
-
-.ui-marmots-label-radio.on:hover {
-    background-image: url(../../img/default/input-radio-hover-checked.png)
-}
-
-.ui-marmots-label-check {
-    background-image: url(../../img/default/input-check.png);
-    background-repeat: no-repeat;
-    background-position: 0 2px
-}
-
-.ui-marmots-label-check.disabled {
-    background-image: url(../../img/default/input-check-disabled.png) !important
-}
-
-.ui-marmots-label-check:hover {
-    background-image: url(../../img/default/input-check-hover.png)
-}
-
-.ui-marmots-label-check.on {
-    background-image: url(../../img/default/input-check-checked.png)
-}
-
-.ui-marmots-label-check.on.disabled {
-    background-image: url(../../img/default/input-check-checked-disabled.png) !important
-}
-
-.ui-marmots-label-check.on:hover {
-    background-image: url(../../img/default/input-check-hover-checked.png)
-}
 
 /* Equifax Form*/
 
