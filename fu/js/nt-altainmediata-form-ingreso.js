@@ -33,21 +33,18 @@ var ntAltaInmediataFormIngresoController = (function() {
     }
 
 
-
-    function initOnChangeValidation() {
-        var isValidForm = false;
+    //funcion que desencadena la validacion para deshabilitar el boton
+    function initValidation() {
         $('.js-form-radio-s1').change(function() {
-            isValidForm = validateFields();
-            ntAltaInmediataUtils.unBlockButton('#next_zero', isValidForm);
+            ntAltaInmediataUtils.unBlockButton('#next_zero', validateFields());
         });
-        $('.js-form-text-s1').keyDown(function() {
-            isValidForm = validateFields();
-            ntAltaInmediataUtils.unBlockButton('#next_zero', isValidForm);
+        $('.js-form-text-s1').keyup(function() {
+            ntAltaInmediataUtils.unBlockButton('#next_zero', validateFields());
         });
     }
 
     return {
-        initOnChangeValidation : initOnChangeValidation
+        initValidation : initValidation
     }
 })();
 
@@ -57,15 +54,18 @@ $(document).ready(function() {
     ntAltaInmediataUtils.initRadioButton();
 
     //valida que al ingresar un rut no se ingresen letras distintas a K y solo numeros
-    ntAltaInmediataUtils.rutFormat(['.js-form-rut-s1']);
+    ntAltaInmediataUtils.onlyRutFormat(['.js-form-rut-s1']);
 
     //valida que se ingrese solo texto
     ntAltaInmediataUtils.onlyTextFormat(['.js-form-name-s1']);
+
+    //valida que se ingrese solo texto
+    ntAltaInmediataUtils.onlyEmailFormat(['.js-form-email-s1']);
 
     //valida que se ingresen solo numeros
     ntAltaInmediataUtils.onlyNumbersFormat(['.js-form-day-s1', '.js-form-month-s1', '.js-form-year-s1']);
 
     //validacion de formulario
-    ntAltaInmediataFormIngresoController.initOnChangeValidation();
+    ntAltaInmediataFormIngresoController.initValidation();
     
 });

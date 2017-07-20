@@ -1,5 +1,7 @@
 var ntAltaInmediataUtils = (function() {
 
+    //dominio que se usara para las llamadas ajax
+
     var domain = "http://93.16.237.8/";
     //var domain = "http://localhost:9082/";
 
@@ -13,7 +15,7 @@ var ntAltaInmediataUtils = (function() {
     }
 
     //ingreso solo caracteres de rut (numeros y "k")
-    function rutFormat(elements) {
+    function onlyRutFormat(elements) {
         elements.forEach(function(field){
             $(field).keypress(function(event) {
                 if (!isMinControlChar(event.which) && !isRutChar(event.which)) {
@@ -61,6 +63,24 @@ var ntAltaInmediataUtils = (function() {
         });
     }
 
+    // solo ingreso mail
+    function onlyEmailFormat(elements) {
+        elements.forEach(function(field) {
+            $(field).keypress(function(event) {
+                //valida el mail
+                console.log('hola');
+                var expreg = new RegExp("^[a-zA-Z0-9@._\\-]$");
+                if (expreg.test(event.key)) {
+
+                } else {
+                    return false;
+                }
+                // valida solo letras
+            });
+        });
+    }
+    
+
     //valida que el campo sea llenado
     function validateTextField(field) {
         if (trimFieldValue(field) === "") {
@@ -73,6 +93,16 @@ var ntAltaInmediataUtils = (function() {
     function validateRutField(field) {
         var val = trimFieldValue(field);
         if (val === "" || !isValidRut(val)) {
+            return false;
+        }
+        return true;
+    }
+
+    //validacion de email
+
+    function validateEmailField(field) {
+        var val = trimFieldValue(field);
+        if (val === "" || !isValidEmail(val)) {
             return false;
         }
         return true;
@@ -100,12 +130,14 @@ var ntAltaInmediataUtils = (function() {
     return {
         domain : domain,
         initRadioButton : initRadioButton,
-        rutFormat : rutFormat,
+        onlyRutFormat : onlyRutFormat,
         onlyTextFormat : onlyTextFormat,
         onlyNumbersFormat : onlyNumbersFormat,
+        onlyEmailFormat : onlyEmailFormat,
         validateTextField : validateTextField,
         validateRutField : validateRutField,
         validateRadioButtonsField : validateRadioButtonsField,
+        validateEmailField : validateEmailField,
         unBlockButton : unBlockButton
     }
 
