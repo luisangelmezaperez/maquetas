@@ -1,0 +1,239 @@
+/* Fonts */
+
+@font-face {
+    font-family: BBVA Web light;
+    src: url('fonts/Stag-Sans-Light.otf');
+}
+
+/*Utilities*/
+
+.u-blue-text {
+	color: #006ec1;
+}
+
+.u-align-left {
+	text-align: left;
+}
+
+/* General */
+
+h1, h2 {
+    font-family: 'BBVA Web light' !important;
+    -webkit-margin-before: 0 !important;
+    -webkit-margin-after: 0 !important;
+}
+
+label.ui-marmots-label-check,label.ui-marmots-label-radio {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-weight: normal;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+label.ui-marmots-label-check input,label.ui-marmots-label-radio input {
+    position: absolute;
+    left: -9999em
+}
+
+label.ui-marmots-label-check.marmots-label-right,label.ui-marmots-label-radio.marmots-label-right {
+    background-position: right 2px !important;
+    padding-right: 26px
+}
+
+label.ui-marmots-label-check.marmots-label-left,label.ui-marmots-label-radio.marmots-label-left {
+    padding-left: 26px !important;
+}
+
+.ui-marmots-label-radio {
+    background-image: url(../../img/default/input-radio.png);
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    /* padding-left: 20px !important; */
+}
+
+.ui-marmots-label-radio.disabled {
+    background-image: url(../../img/default/input-radio-disabled.png) !important
+}
+
+.ui-marmots-label-radio:hover {
+    background-image: url(../../img/default/input-radio-hover.png)
+}
+
+.ui-marmots-label-radio.on {
+    background-image: url(../../img/default/input-radio-checked.png)
+}
+
+.ui-marmots-label-radio.on.disabled {
+    background-image: url(../../img/default/input-radio-checked-disabled.png) !important
+}
+
+.ui-marmots-label-radio.on:hover {
+    background-image: url(../../img/default/input-radio-hover-checked.png)
+}
+
+.ui-marmots-label-check {
+    background-image: url(../../img/default/input-check.png);
+    background-repeat: no-repeat;
+    background-position: 0 2px
+}
+
+.ui-marmots-label-check.disabled {
+    background-image: url(../../img/default/input-check-disabled.png) !important
+}
+
+.ui-marmots-label-check:hover {
+    background-image: url(../../img/default/input-check-hover.png)
+}
+
+.ui-marmots-label-check.on {
+    background-image: url(../../img/default/input-check-checked.png)
+}
+
+.ui-marmots-label-check.on.disabled {
+    background-image: url(../../img/default/input-check-checked-disabled.png) !important
+}
+
+.ui-marmots-label-check.on:hover {
+    background-image: url(../../img/default/input-check-hover-checked.png)
+}
+
+/* Equifax Form*/
+
+.equifaxQuestions {
+	padding: 15px;
+}
+
+.equifaxQuestions .column:last-child:not(:first-child) {
+	float:left;
+}
+
+.termConsiderations {
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.equifaxTerms {
+	padding: 0px 15px;
+    text-align: left;
+}
+
+.equifaxTerms .labelTerm{
+	display:inline;
+	margin-left: 15px;
+}
+
+.acceptTermConditions {
+	display: none;
+}
+
+.equifaxTerms .label-error {
+	color : #c4136c;
+	margin-left: 0px;
+}
+
+.altainmediata-step23 {
+	background: #F4F4F4;
+}
+
+div .offer-altainmediata {
+	width: auto !important;
+	padding: 20px 38px 38px 38px !important;
+}
+
+.side_leftaltainmediata {
+	margin-bottom: auto !important;
+	padding-bottom: 0px !important;
+}
+
+.head_step .side-title {
+	margin-bottom: 20px;
+    line-height: 35px !important;
+}
+
+.first-title {
+	font-size: 1.5em;
+}
+
+.description {
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+.nt_button_disable {
+	opacity: 0.5
+}
+
+.ui-selectmenu-button span.ui-selectmenu-text {
+	color: #127BBF !important;
+}
+
+.agreement {
+	line-height: 1.5em;
+	font-family: 'stag_sans_ligth';
+	text-align: justify;
+	font-size: 13px;
+}
+
+@media (max-width: 480px) {
+	.u-title-responsive {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 40em) {
+	div .offer-altainmediata {
+		width: auto !important;
+		padding: 30px 32px 30px 30px !important;
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.column.pr-no{
+	    padding-right: 0 !important;
+	}
+}
+
+
+/*** AUX ***/
+
+.contentSteps1{
+    padding: 10px 100px !important;
+}
+
+@media (max-width: 640px) {
+    .contentSteps1{
+        padding: 10px !important;
+    }
+}
+
+.contentSteps1 h1{
+    font-size: 24px;
+}
+
+article#side_rigth_first p{
+    margin-bottom: 0;
+}
+
+.contentBlock{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contentBlock h1{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+ .offer{
+     width: 100%;
+     padding: 30px 30px 30px 30px;
+ }
+}

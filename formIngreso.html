@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alta Inmediata</title>
+	<head>
+		<link rel="stylesheet" href="fu/css/foundation2.css?v=1.5">
+		<link rel="stylesheet" href="fu/css/stylebbva.css?v=1.5">
+		<link rel="stylesheet" href="fu/css/main.css?v=1.5" media="all" />
+		<link rel="stylesheet" href="fu/css/jquery-ui.css">
+		<link rel="stylesheet" href="fu/css/jquery.modal.css">
+		<!-- <link rel="stylesheet" href="fu/css/fu_haztecliente.css"> -->
+		<link rel="stylesheet" href="fu/css/nt-altainmedita.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formulario &Uacute;nico</title>
+<!-- 		<script src="${url.assets.adobedtm.com}"></script>
+ -->	</head>
+</head>
+<body>
+	
+	<section id="step_one" class="section_main height_step2">
+		<div class="row">
+			<div class="small-12 medium-4 large-4 columns"><!--Se cambia medium-12 por medium-4-->
+				<article class="side_left">
+					<div class="offer">
+						<div class="content_under">
+							<div class="row">
+								<div>
+									<h3>¡Bienvenido, nos alegra tenerte por ac&aacute;!</h3>
+									
+									<p>Queremos ser tu banco, estar donde t&uacute; est&eacute;s.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="small-12 medium-8 large-8 columns"><!--Se cambia medium-12 por medium-8-->
+
+				<article id="side_rigth_first">
+					<div id="side_rigth_banner">
+						<p>
+							<img id="img1" src="https://www.bbva.cl/fbin/mult/banner-grande_tcm1106-623015.jpg" class="responsive image1">
+							<img id="img2" src="https://www.bbva.cl/fbin/mult/banner-pequeno_tcm1106-623016.jpg" class="responsive image2">
+						</p>
+					</div>
+				</article>
+				<div id="side_rigth_content">
+					<div class="contentSteps1 paso1">
+						<h1>Revisa si tienes un Cr&eacute;dito de Consumo pre aprobado</h1>
+					</div>
+
+					<div class="row block_two_columns contentBlock">
+						<h1>Antes de comenzar, comp&aacute;rtenos la siguiente informaci&oacute;n</h1>
+						
+						<div class="small-12 medium-6 large-6 column margin_input_form">
+							<!--Se cambia medium-12 por medium-6-->
+							<label>¿C&oacute;mo te llamas?</label> 
+							<input type="text" class="js-form-name-s1 js-form-text-s1" maxlength="20" />
+						</div>
+						<div class="small-12 medium-6 large-6 column margin_input_form"><!--Se cambia medium-12 por medium-6-->
+							<label>¿Cuál es tu RUT?</label> 
+							<input type="text" class="js-form-rut-s1 js-form-text-s1" maxlength="12" />
+						</div>
+						
+						<div class="small-12 large-6 medium-6 column margin_input_form">
+							<label>Fecha de nacimiento (dd/mm/aaaa)</label>
+							<div class="row">
+								<div class="large-3 medium-4 small-12 column pr-no">
+									<input id="bDay" class="js-form-day-s1 js-form-text-s1" name="bDay"  placeholder="dd" type="text" value="" maxlength="2" autocomplete="off" >
+								</div>
+								<div class="large-3 medium-4 small-12 column pr-no">
+									<input id="bMonth" name="bMonth" class="js-form-month-s1 js-form-text-s1" placeholder="mm" type="text" value="" maxlength="2" autocomplete="off">
+								</div>
+								<div class="large-6 medium-4 small-12 column">
+									<input id="bYear" name="bYear" class="js-form-year-s1 js-form-text-s1" placeholder="aaaa" type="text" value="" maxlength="4" autocomplete="off">
+								</div>
+							</div>
+						</div>
+
+						<div class="small-12 medium-6 large-6 column margin_input_form">
+							<label for="">¿Cu&aacute;l es tu condici&oacute;n laboral?</label>
+							<div class="row">
+								<div class="large-6 medium-6 small-6 column pr-no">
+									<label for="dependiente" class="ui-marmots-label-radio marmots-label-left">
+										<input id="dependiente" type="radio" name="dependent" class="js-form-dependent-s1 js-form-radio-s1" value="dependiente">Dependiente
+									</label>
+								</div>
+								<div class="large-6 medium-6 small-6 column">
+									<label for="independiente" class="ui-marmots-label-radio marmots-label-left">
+										<input id="independiente" type="radio" name="dependent" class="js-form-dependent-s1 js-form-radio-s1" value="independiente">Independiente
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- se cambia la clase a hiddenMedium-->	
+					</div><!-- row -->
+
+				</div>
+				<div class="row">
+					<div class="button_init">
+						<button class="init_button nt_button_disable" id="next_zero" disabled>Comenzar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="fu/js/jquery.js"></script>
+	<script type="text/javascript" src="fu/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="fu/js/foundation2.js"></script>
+	<script type="text/javascript" src="fu/js/modernizr.js"></script>
+	<script type="text/javascript" src="fu/js/jquery.modal.js"></script>
+	<script type="text/javascript" src="fu/js/iframeResizer.contentWindow.min.js"></script>
+	<script type="text/javascript" src="fu/js/iframeResizer.min.js"></script>
+	<script type="text/javascript" src="fu/js/jquery.price_format.2.0.min.js"></script>
+	<script type="text/javascript" src="fu/js/moment.min.js"></script>
+	<script type="text/javascript" src="fu/js/main.js"></script>
+	<script type="text/javascript" src="fu/js/service.js"></script>
+	<script type="text/javascript" src="fu/js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="fu/js/config.js"></script>
+	<script type="text/javascript" src="fu/js/events.js"></script>
+	<script type="text/javascript" src="fu/js/validate.js"></script>
+	<script type="text/javascript" src="fu/js/fu.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/utils_fu.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/fu_haztecliente.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/fu_subirdocumentos.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/fu_haztecliente_utils.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/fu_haztecliente_referencias.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/nt-altainmediata-utils.js?v=<%=ts %>"></script>
+	<script type="text/javascript" src="fu/js/nt-altainmediata-form-ingreso.js?v=<%=ts %>"></script>
+	<script>
+		$(function() {
+			$(document).foundation();
+			com.bbva.main.Main.init();
+			$(".select_").selectmenu();
+			$(document).tooltip({
+				position : {
+					my : "center bottom-7",
+					at : "center top",
+					using : function(position) {
+						$(this).css(position);
+						$("<div>").addClass("arrow").appendTo(this);
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>
