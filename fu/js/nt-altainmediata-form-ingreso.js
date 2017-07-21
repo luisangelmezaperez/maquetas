@@ -14,37 +14,46 @@ var ntAltaInmediataFormIngresoRequests = (function() {
 
 var ntAltaInmediataFormIngresoController = (function() {
 
-    function validateFields() {
+    function validateFieldErrorMessages() {
+        $('.js-form-name-s1').blur(function() {
+            ntAltaInmediataUtils.validateTextField('.js-form-name-s1', 'Debe ingresar un nombre');
+        });
 
+        $('.js-form-rut-s1').blur(function() {
+            ntAltaInmediataUtils.validateRutField('.js-form-rut-s1', 'Debe ingresar un rut válido');
+        });
+
+        $('.js-form-day-s1, .js-form-month-s1, .js-form-year-s1').blur(function() {
+
+            ntAltaInmediataUtils.validateBirthDateField('.js-form-day-s1', '.js-form-month-s1', '.js-form-year-s1');
+        });
+    }
+
+
+    //funcion que desencadena la validacion para deshabilitar el boton
+    function validationForNextStep() {
         if(!ntAltaInmediataUtils.validateTextField('.js-form-name-s1'))
             return false;
         if(!ntAltaInmediataUtils.validateRutField('.js-form-rut-s1'))
             return false;
         if(!ntAltaInmediataUtils.validateTextField('.js-form-day-s1'))
             return false;
-        if(!ntAltaInmediataUtils.validateTextField('.js-form-month-s1'))
-            return false;
-        if(!ntAltaInmediataUtils.validateTextField('.js-form-year-s1'))
+        if(!ntAltaInmediataUtils.validateBirthDateField('.js-form-day-s1', '.js-form-month-s1', '.js-form-year-s1'))
             return false;
         if(!ntAltaInmediataUtils.validateRadioButtonsField('.js-form-dependent-s1'))
             return false;
-        
+
         return true;
     }
 
-
-    //funcion que desencadena la validacion para deshabilitar el boton
-    function initValidation() {
-        $('.js-form-radio-s1').change(function() {
-            ntAltaInmediataUtils.unBlockButton('#next_zero', validateFields());
-        });
-        $('.js-form-text-s1').keyup(function() {
-            ntAltaInmediataUtils.unBlockButton('#next_zero', validateFields());
-        });
+    function validations() {
+        var validForm = validationForNextStep();
+        ntAltaInmediataUtils.unBlockButton('#next_zero', validForm);
     }
 
     return {
-        initValidation : initValidation
+        validateFieldErrorMessages : validateFieldErrorMessages,
+        validations : validations
     }
 })();
 
@@ -59,13 +68,19 @@ $(document).ready(function() {
     //valida que se ingrese solo texto
     ntAltaInmediataUtils.onlyTextFormat(['.js-form-name-s1']);
 
-    //valida que se ingrese solo texto
-    ntAltaInmediataUtils.onlyEmailFormat(['.js-form-email-s1']);
-
     //valida que se ingresen solo numeros
     ntAltaInmediataUtils.onlyNumbersFormat(['.js-form-day-s1', '.js-form-month-s1', '.js-form-year-s1']);
 
     //validacion de formulario
-    ntAltaInmediataFormIngresoController.initValidation();
+    ntAltaInmediataFormIngresoController.validateFieldErrorMessages();
+
+    $('.js-form-text-s1').keyup(function(){
+        ntAltaInmediataFormIngresoController.validations();
+    });
+    $('.js-form-dependent-s1').change(function(){
+        ntAltaInmediataFormIngresoController.validations();
+    });
+
+    
     
 });

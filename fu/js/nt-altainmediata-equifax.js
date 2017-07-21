@@ -400,6 +400,17 @@ $(document).ready(function() {
     
 });
 
+
+// var prueba = {
+//     "code":"-1",
+//     "description":"{\"content\":\"Lamentablemente no podemos atender tu solicitud.\",\"title\":\"\"}"
+// }
+
+// function pruebaObject() {
+//     console.log(JSON.parse(prueba.description).title);
+//     //console.log(JSON.parseprueba.description);
+// }
+
 // var dataQuestions = {
 //    "code":"00",
 //    "description":"0",
